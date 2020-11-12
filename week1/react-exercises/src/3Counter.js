@@ -5,8 +5,8 @@ const Counter = () => {
   const feedback = count > 10 ? <p>"It's higher than 10!"</p> : <p>"Keep counting..."</p>
   return (
     <div>
-    <p>You clicked {count} times</p>
-    <p>{feedback}</p>
+    You clicked {count} times
+    {feedback}
    <button onClick={() => setCount(count + 1)}>
       Add 1!
     </button>
