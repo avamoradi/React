@@ -8,7 +8,7 @@ import Counter from './3Counter';
 const hobbies = ['Surfing', 'Rock climbing', 'Mountain biking', 'Breakdancing'];
 
 //exercise 2
-const comment = [
+const serviceArr = [
   {description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   title: 'Online support 24/7',
   imgUrl: 'chat.png'},
@@ -26,24 +26,8 @@ function App() {
     <div>
           <HobbyList hobbies ={hobbies} />
     </div>
-    <div className="flex"> 
-    < Guarantee  
-                 description = {comment[0].description}
-                 title = {comment[0].title}
-                 imgUrl = {comment[0].imgUrl}
-    
-    />
-    < Guarantee  
-                 description = {comment[1].description}
-                 title = {comment[1].title}
-                 imgUrl = {comment[1].imgUrl}
-    
-    />
-    < Guarantee  
-                 description = {comment[2].description}
-                 title = {comment[2].title}
-                 imgUrl = {comment[2].imgUrl}
-     />
+    <div> 
+         <Guarantee serviceArr={serviceArr}/>
     </div>
 
     <div>
