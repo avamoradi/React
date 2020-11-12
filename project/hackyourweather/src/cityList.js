@@ -11,16 +11,16 @@ import data from './city-weather.json';
       <h5>{city.weather[0].description}</h5>
     </div>
     <div>
-      <label>min temp:</label>
-      <label>{city.main.temp_min}</label>
+      <span>min temp:</span>
+      <span>{city.main.temp_min}</span>
     </div>
     <div>
-      <label>max temp:</label>
+      <span>max temp:</span>
       <label>{city.main.temp_max}</label>
     </div>
     <div>
-      <label>location:</label>
-      <label>{city.coord.lat},{city.coord.lon}</label>
+      <span>location:</span>
+      <span>{city.coord.lat},{city.coord.lon}</span>
     </div>
   </div>)
     return (
