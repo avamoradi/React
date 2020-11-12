@@ -5,8 +5,8 @@ function Guarantee(props) {
     <div>
       <img src={item.imgUrl}
       alt = {item.title}/>
-      <div> {item.title} </div>
-      <div>{item.description} </div>
+      <h> {item.title} </h>
+      <p>{item.description} </p>
     </div>
   );
   return (
