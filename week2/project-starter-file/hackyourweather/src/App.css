@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  color:#493843;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  margin : 0 auto;
+  width: 60%;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 1rem 0;
+  letter-spacing: 5px;
+}
+.Card {
+  margin: 0 auto;
+  width: 50%;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 2px;
+  border: 1px solid #EABDA8;
+  color:#493843;
+  background-color: #EABDA8;
+  font-size:1rem;
+}
+
+.Card div{
+  padding: 0.2rem ;
+  margin: 0.2rem;
+}
+
+ label {
+  margin: 0.1em;
+} 
+
+.forminput{
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+
+}
+
+.flex{
+  display:flex;
+}
+
+input{
+  box-sizing: border-box;
+  border: 2px solid #61988E;
+  border-radius: 10px;
+  font-size: 16px;
+  background-position: 10px 10px; 
+  margin:0.5rem;
+  padding: 5px;
+  width: 70%;
+  height: 35px;
+
+}
+
+button{
+  box-sizing: border-box;
+  border: 2px solid #61988E;
+  border-radius: 5px;
+  font-size: 16px;
+  background-position: 10px 10px; 
+  background-color:white;
+  margin:0.5rem;
+  height: 35px;
+  padding: 5px;
+}
+
+button:active{
+  background-color:#61988E;
+}
+
+
+/* @media screen and (min-width: 601px) {
+  .App,
+  .list,
+  .alert {
+    width: 85%;
+  }
+
+  .list {
+    margin: 2rem auto 0 auto;
+  }
+}
+@media screen and (min-width: 993px) {
+  .App,
+  .list,
+  .alert {
+    width: 70%;
+  }
+  .list {
+    margin: 2rem auto 0 auto;
+  }
+  .info {
+    flex: 0 0 50%;
+  }
+} */
