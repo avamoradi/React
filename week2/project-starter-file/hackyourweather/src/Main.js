@@ -17,7 +17,7 @@ require('dotenv').config()
       if (!location)  return  setError("Please Enter the name of city.")
       
       setLoading(true);
-      return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${api_key}&units=metric`)
+      return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${api_key}&units=metric`)
          .then(res => res.json())
          .then(data => setCity(data))
          .catch(error=> setError(error)) 
