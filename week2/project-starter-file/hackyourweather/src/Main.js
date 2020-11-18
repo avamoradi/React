@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import CityList from './cityList';
 import Form from './Form';
+
 require('dotenv').config()
 
 
@@ -8,7 +9,7 @@ require('dotenv').config()
    const api_key = process.env.REACT_APP_OPENWEATHERMAP_API_KEY;
    const [loading, setLoading] = useState(false);
    const [error, setError] = useState();
-   const [city, setCity] = useState();
+   const [city, setCity] = useState({});
 
    const fetchApi  = (e) => {
      setError(false);
@@ -19,14 +20,18 @@ require('dotenv').config()
       setLoading(true);
       return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${api_key}&units=metric`)
          .then(res => res.json())
-         .then(data => setCity(data))
-         .catch(error=> setError(error)) 
+         .then(data => {
+          if( data.cod < 400 ){
+           setCity(data)
+          } else {throw Error("There is an Error") }
+       })
+         .catch(error=> setError(error.message)) 
          .finally(setLoading(false));
    }
    return (
       <>
       <Form fetchApi={fetchApi} />
-      { city && <CityList city={city} error={error} loading={loading}/>}
+      {(error || Object.keys(city).length > 0) && <CityList city={city} error={error} loading={loading}/> }
      </>
     )
 }
